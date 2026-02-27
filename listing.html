@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Details - KyU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-house-chimney"></i>
+      KyU
+    </a>
+    <div class="nav-links">
+      <a href="student.html">Browse Listings</a>
+    </div>
+  </nav>
+
+  <!--
+    JS render target - app.js reads the ?id= URL parameter
+    and fills this div with the property's photos, details, and contact info.
+  -->
+  <div class="detail-page" id="detailPage"></div>
+
+  <footer class="footer">
+    <p>&copy; 2026 KyU. Built for students, by students.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login - KyU Rentals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-house-chimney"></i>
+      KyU Rentals
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+    </div>
+  </nav>
+
+  <!-- Login page - centered card layout -->
+  <div class="login-page">
+    <div class="login-card">
+      <div class="login-icon student">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <h1>Student Login</h1>
+      <p class="login-subtitle">Sign in to browse available rentals near campus</p>
+
+      <!-- Login form - id connects to JS event handler in app.js -->
+      <form id="studentLoginForm" class="login-form">
+        <div class="login-field">
+          <label for="studentEmail">Email Address</label>
+          <!-- input-icon: icon is positioned inside the input via CSS -->
+          <div class="input-icon">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="studentEmail" placeholder="you@student.kyu.ac.ke" required>
+          </div>
+        </div>
+        <div class="login-field">
+          <label for="studentPassword">Password</label>
+          <div class="input-icon">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="studentPassword" placeholder="Enter your password" required>
+          </div>
+        </div>
+        <div class="login-options">
+          <label class="remember-me">
+            <input type="checkbox"> Remember me
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+        <button type="submit" class="login-btn student-btn">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In
+        </button>
+      </form>
+
+      <div class="login-divider"><span>or</span></div>
+
+      <!-- Signup form - hidden by default, toggled via JS -->
+      <form id="studentSignupForm" class="login-form" style="display: none;">
+        <div class="login-field">
+          <label for="studentSignupName">Full Name</label>
+          <div class="input-icon">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="studentSignupName" placeholder="John Doe" required>
+          </div>
+        </div>
+        <div class="login-field">
+          <label for="studentSignupEmail">Email Address</label>
+          <div class="input-icon">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="studentSignupEmail" placeholder="you@student.kyu.ac.ke" required>
+          </div>
+        </div>
+        <div class="login-field">
+          <label for="studentSignupPassword">Password</label>
+          <div class="input-icon">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="studentSignupPassword" placeholder="Create a password" required>
+          </div>
+        </div>
+        <button type="submit" class="login-btn student-btn">
+          <i class="fa-solid fa-user-plus"></i> Create Account
+        </button>
+      </form>
+
+      <!-- Toggle link - JS switches between login and signup forms -->
+      <p class="login-toggle">
+        <span id="toggleText">Don't have an account?</span>
+        <a href="#" id="toggleAuth">Sign Up</a>
+      </p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 KyU Rentals. Built for students, by students.</p>
+  </footer>
+
+  <!-- Only app.js needed here (no data.js since no listings are shown) -->
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KyU - Find Student Housing Near Campus</title>
+  <!-- Google Fonts (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar - sticky at the top of every page -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-house-chimney"></i>
+      KyU Rentals
+    </a>
+    <div class="nav-links">
+      <a href="student.html">Browse Rentals</a>
+      <a href="landlord-login.html">Landlord Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero section - gradient banner with main headline -->
+  <section class="hero">
+    <h1>Find Your Perfect Home Near Campus</h1>
+    <p>KyU connects university students with verified rental properties. Browse available houses, compare amenities, and find a place that fits your budget and lifestyle.</p>
+  </section>
+
+  <!-- Role selection cards - overlap the hero with negative margin -->
+  <section class="role-cards">
+    <!-- Student card - links directly to browse page (no login needed) -->
+    <a href="student.html" class="role-card student">
+      <div class="icon-circle">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <h2>I'm a Student</h2>
+      <p>Browse available houses, compare prices, check amenities, and find the perfect place near your university.</p>
+      <span class="btn">Browse Rentals</span>
+    </a>
+    <!-- Landlord card - links to landlord login -->
+    <a href="landlord-login.html" class="role-card landlord">
+      <div class="icon-circle">
+        <i class="fa-solid fa-building"></i>
+      </div>
+      <h2>I'm a Landlord</h2>
+      <p>List your rental properties, upload photos, set prices, and reach thousands of students looking for housing.</p>
+      <span class="btn">Landlord Login</span>
+    </a>
+  </section>
+
+  <!-- Features section - three benefit cards in a grid -->
+  <section class="features">
+    <h2>Why Choose KyU?</h2>
+    <p class="subtitle">Everything you need to find or list student housing, all in one place.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feat-icon">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </div>
+        <h3>Near Campus</h3>
+        <p>Find houses sorted by distance from your university. Know exactly how far you'll be from classes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">
+          <i class="fa-solid fa-camera"></i>
+        </div>
+        <h3>Photo Gallery</h3>
+        <p>View detailed photos of every property before you visit. No surprises when you arrive.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">
+          <i class="fa-solid fa-sliders"></i>
+        </div>
+        <h3>Smart Filters</h3>
+        <p>Filter by price, amenities, bedrooms, and distance to find exactly what fits your needs and budget.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 KyU. Built for students, by Enoch Musyoka.</p>
+  </footer>
+
+</body>
+</html>

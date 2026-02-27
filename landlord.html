@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landlord Dashboard - KyU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-house-chimney"></i>
+      KyU
+    </a>
+    <div class="nav-links">
+      <a href="landlord.html" class="active">My Listings</a>
+      <span id="navUserInfo"></span>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Page Header -->
+    <div class="page-header">
+      <h1>Landlord Dashboard</h1>
+      <p>Manage your rental properties and add new listings</p>
+    </div>
+
+    <!-- My Listings Section -->
+    <div class="landlord-section">
+      <h2><i class="fa-solid fa-table-list"></i> My Listings</h2>
+      <div class="listings-table-wrapper">
+        <table class="listings-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Location</th>
+              <th>Rent</th>
+              <th>Room Type</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="landlordTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Add New Listing Section -->
+    <div class="landlord-section">
+      <h2><i class="fa-solid fa-circle-plus"></i> Add New Listing</h2>
+      <div class="form-card">
+        <form id="addListingForm">
+          <div class="form-grid">
+
+            <!-- Property Title -->
+            <div class="form-group">
+              <label for="propTitle">Property Title *</label>
+              <input type="text" id="propTitle" placeholder="e.g. Sunrise Apartments" required>
+            </div>
+
+            <!-- Location -->
+            <div class="form-group">
+              <label for="propLocation">Location *</label>
+              <input type="text" id="propLocation" placeholder="e.g. 45 College Road, South B" required>
+            </div>
+
+            <!-- Distance -->
+            <div class="form-group">
+              <label for="propDistance">Distance from University (km)</label>
+              <input type="number" id="propDistance" placeholder="e.g. 1.5" step="0.1" min="0">
+            </div>
+
+            <!-- Monthly Rent -->
+            <div class="form-group">
+              <label for="propPrice">Monthly Rent (KSh) *</label>
+              <input type="number" id="propPrice" placeholder="e.g. 12000" min="0" required>
+            </div>
+
+            <!-- Room Type -->
+            <div class="form-group">
+              <label for="propRoomType">Room Type *</label>
+              <select id="propRoomType" required>
+                <option value="">Select</option>
+                <option value="Bedsitter">Bedsitter</option>
+                <option value="Single Room">Single Room</option>
+                <option value="Double Room">Double Room</option>
+                <option value="1 Bedroom">1 Bedroom</option>
+              </select>
+            </div>
+
+            <!-- Amenities -->
+            <div class="form-group full-width">
+              <label>Amenities</label>
+              <div class="checkbox-grid" id="amenityCheckboxes"></div>
+            </div>
+
+            <!-- Photo URLs -->
+            <div class="form-group full-width">
+              <label>Photo URLs</label>
+              <div class="photo-inputs" id="photoInputs">
+                <div class="photo-input-row">
+                  <input type="url" placeholder="Paste image URL...">
+                </div>
+                <button type="button" class="add-photo-btn" id="addPhotoBtn">
+                  <i class="fa-solid fa-plus"></i> Add another photo
+                </button>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group full-width">
+              <label for="propDescription">Description</label>
+              <textarea id="propDescription" placeholder="Describe the property, surroundings, and any special features..."></textarea>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+              <label for="propPhone">Contact Phone *</label>
+              <input type="tel" id="propPhone" placeholder="e.g. +254 712 345 678" required>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group full-width">
+              <button type="submit" class="submit-btn">
+                <i class="fa-solid fa-plus"></i> Add Listing
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Success message -->
+        <div class="success-message" id="successMessage">
+          <i class="fa-solid fa-circle-check"></i>
+          Listing added successfully! It will now appear in the browse page.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 KyU. Built for students, by students.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
